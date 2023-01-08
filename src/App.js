@@ -1,24 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import { addToCart } from './redux/action';
+import { useDispatch } from 'react-redux';
 
 function App() {
+
+  const dispatch = useDispatch() 
+
+  const product = {
+    type: "mobile",
+    prize: 40000,
+    name: "google pixel",
+    color: "grey"
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <button className='btn btn-primary' onClick={() => dispatch(addToCart(product))}>Add To Cart</button>
+    </>
   );
 }
 
