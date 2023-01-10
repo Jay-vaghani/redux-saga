@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { addToCart } from './redux/action';
+import { addToCart, removeToCart } from './redux/action';
 import { useDispatch } from 'react-redux';
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
 
   return (
     <>
+      <button className='btn btn-primary' onClick={() => dispatch(removeToCart(product))}>Remove To Cart</button>
       <button className='btn btn-primary' onClick={() => dispatch(addToCart(product))}>Add To Cart</button>
     </>
   );
