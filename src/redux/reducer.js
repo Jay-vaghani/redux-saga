@@ -1,4 +1,4 @@
-import { Add_Cart, Remove_Cart, Temp_Cart } from "./variable";
+import { Add_TO_Cart, Remove_FROM_Cart, EMPTY_CART } from "./variable";
 
 const dataArr = []
 
@@ -6,29 +6,19 @@ export const cartData = (data = dataArr, action) => {
 
 
     switch (action.type) {
-        case Add_Cart:
-            console.log("Add To Cart" ,action.data);
-            return "abc"
+        case Add_TO_Cart:
+            console.log("Add To Cart", action);
+            return [action.data, ...data]
             break;
-        case Remove_Cart:
-            console.log("Remove To Cart" ,action.data);
-            return "abc"
+        case Remove_FROM_Cart:
+            data.length = data.length ? data.length - 1 : []
+            return [...data]
             break;
-        default:
-            return "abc"
-    }
-}
-
-
-export const tempData = (data = dataArr, action) => {
-
-
-    switch (action.type) {
-        case Temp_Cart:
-            console.log("Temp To Cart" ,action.data);
-            return "abc"
+        case EMPTY_CART:
+            data = []
+            return data
             break;
         default:
-            return "abc"
+            return data
     }
 }

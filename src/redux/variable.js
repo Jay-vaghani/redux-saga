@@ -1,4 +1,3 @@
-export const Add_Cart = "Add Cart"
-export const Remove_Cart = "Remove Cart"
-
-export const Temp_Cart = "Temporary Cart"
+export const Add_TO_Cart = "Add Cart"
+export const Remove_FROM_Cart = "Remove_FROM_Cart"
+export const EMPTY_CART = "EMPTY_CART"
