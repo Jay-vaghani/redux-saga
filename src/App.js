@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { addToCart, removeToCart } from './redux/action';
+import { addToCart, removeToCart, tempCart } from './redux/action';
 import { useDispatch } from 'react-redux';
 
 function App() {
@@ -14,10 +14,18 @@ function App() {
     color: "grey"
   }
 
+  const tempData = {
+    type: "mobile",
+    prize: 40000,
+    name: "google pixel",
+    color: "grey"
+  }
+
   return (
     <>
       <button className='btn btn-primary' onClick={() => dispatch(removeToCart(product))}>Remove To Cart</button>
       <button className='btn btn-primary' onClick={() => dispatch(addToCart(product))}>Add To Cart</button>
+      <button className='btn btn-primary' onClick={() => dispatch(tempCart(tempData))}>temp To Cart</button>
     </>
   );
 }

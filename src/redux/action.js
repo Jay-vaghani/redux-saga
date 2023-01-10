@@ -1,4 +1,4 @@
-import { Add_Cart, Remove_Cart } from "./variable"
+import { Add_Cart, Remove_Cart, Temp_Cart } from "./variable"
 
 export const addToCart = (data) =>{
     return {
@@ -13,3 +13,13 @@ export const removeToCart = (data) =>{
         data: data
     }
 }
+
+
+export const tempCart = (data) =>{
+    return {
+        type: Temp_Cart,
+        data: data
+    }
+}
+
+

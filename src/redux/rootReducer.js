@@ -1,8 +1,9 @@
 import {combineReducers} from 'redux'
-import { cartData } from './reducer'
+import { cartData, tempData } from './reducer'
 
 export default combineReducers({
 
     
-    cartData
+    cartData,
+    tempData
 })
