@@ -5,7 +5,7 @@ function Header() {
 
     const result = useSelector((state) => state )
 
-    console.log("redux data in header" ,result);
+    console.log(result);
 
     return (
         <nav className="navbar navbar-expand-md bg-body-tertiary">
