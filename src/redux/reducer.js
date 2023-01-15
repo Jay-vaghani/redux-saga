@@ -9,8 +9,13 @@ export const cartData = (data = dataArr, action) => {
         case Add_TO_Cart:
             return [action.data, ...data]
         case Remove_FROM_Cart:
-            data.length = data.length ? data.length - 1 : []
-            return [...data]
+
+            console.log("action data",action.data);
+
+            const remainingItems = data.filter((item) => {
+                return item.id !== action.data
+            }) 
+            return [...remainingItems]
         case EMPTY_CART:
             data = []
             return data

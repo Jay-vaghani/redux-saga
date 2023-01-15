@@ -45,7 +45,7 @@ function Main() {
                                             <h5 className='fw-bolder text-start mb-2'>Brand : {product.brand}</h5>
                                             <h5 className='fw-bolder text-start mb-2'>Price : {product.price}$</h5>
                                             <div className='position-absolute bottom-0 d-flex pb-2   w-100'>
-                                                <button className='btn  btn-primary me-1' >Add To Cart</button>
+                                                <button className='btn  btn-primary me-1' onClick={() => dispatch(addToCart(product))}>Add To Cart</button>
                                             </div>
                                         </div>
                                     </div>
