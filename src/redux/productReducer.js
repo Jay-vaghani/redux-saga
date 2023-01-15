@@ -1,12 +1,11 @@
-import { PRODUCT_LIST } from "./variable";
+import { PRODUCT_LIST, SET_PRODUCT_LIST } from "./variable";
 
 
 export const productData = (data = [], action) => {
     switch (action.type) {
-        case PRODUCT_LIST:
+        case SET_PRODUCT_LIST:
             return action.data
-    
         default:
-            return "No Action Called"
+            return data
     }
 }
