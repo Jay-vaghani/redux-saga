@@ -17,17 +17,10 @@ function Main() {
 
     const dispatch = useDispatch()
 
-    const producttemp = {
-        type: "mobile",
-        prize: 40000,
-        name: "google pixel",
-        color: "grey"
-    }
-
     return (
         <div className="container mt-5">
             {/* <button className='btn btn-primary' onClick={() => dispatch(addToCart(producttemp))}>Add To Cart</button>
-            <button className='btn btn-primary' onClick={() => dispatch(removeFromCart(producttemp))}>Remove From Cart</button>
+            <button className='btn btn-primary' >Remove From Cart</button>
             <button className='btn btn-primary' onClick={() => dispatch(emptyCart())}>Empty Cart</button> */}
 
             <div className="container overflow-hidden text-center">
